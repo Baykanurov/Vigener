@@ -1,0 +1,21 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+    {{ super() }}
+<link type="image/png" sizes="120x120" rel="icon" href="static/icons8-slither-io-120.png">
+<style>
+body {
+  background-image: url('static/anime.jpg');
+}
+</style>
+{% endblock head %}
+
+{% block content %}
+<div class="container">
+  <h3 style='color:#81E9CD'>Шифр Виженера</h3>
+  <div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+  </div>
+</div>
+{% endblock %}
